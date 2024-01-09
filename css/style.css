@@ -1,0 +1,834 @@
+@font-face {
+    font-family: 'Droid Serif';
+    src: url(/fonts/DroidSerif-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Droid Serif';
+    src: url(/fonts/DroidSerif-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(/fonts/Roboto-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 27px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo,
+.nav-links {
+    transform: translateY(-70px);
+    transition: 0.8s;
+}
+
+nav img {
+    width: 165px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    display: inline-block;
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 50%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-family: 'Droid Serif';
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 48px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 42px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn.btn-left {
+    background-color: #00AEEF;
+    color: #fff;
+}
+
+.btn.btn-left:hover {
+    background-color: #fff;
+    color: #00AEEF;
+}
+
+.btn.btn-right {
+    background-color: #fff;
+    color: #00AEEF;
+}
+
+.btn.btn-right:hover {
+    background-color: #00AEEF;
+    color: #fff;
+}
+
+nav .fa {
+    display: none;
+}
+
+.nav-links ul li.btn-purchase {
+    display: none;
+}
+
+.nav-links ul li.menu-home {
+    display: none;
+}
+
+/*------- about the book -------*/
+
+.about-the-book {
+    display: flex;
+    align-items: center;
+    padding: 5% 15% 0;
+    column-gap: 10%;
+}
+
+.about-the-book .cover {
+    position: relative;
+    top: 3px;
+}
+
+.about-the-book .cover img {
+    width: 387px;
+}
+
+.about-the-book .content {
+    order: 2;
+}
+
+.about-the-book .content h1 {
+    font-family: 'Droid Serif';
+    font-size: 30px;
+    margin-bottom: 23px;
+}
+
+.about-the-book .content p {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    color: #666666;
+    line-height: 24px;
+    width: 90%;
+}
+
+/*---- example pages ----*/
+
+.example-pages {
+    margin: auto;
+    text-align: center;
+    padding: 120px 29px 96px 28px;
+    background-color: #F7F7F7;
+}
+
+.example-pages h1 {
+    font-family: 'Droid Serif';
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.row {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exam-pages-col {
+    flex-basis: 31%;
+    background-color: #fff;
+    border: 1px solid #DDDDDD;
+    padding: 20px 40px;
+    text-align: left;
+    transition: 0.5s;
+    position: relative;
+    z-index: 99;
+}
+
+.exam-pages-col::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #DDDDDD;
+    width: 96%;
+    height: 8px;
+    bottom: -10px;
+    left: 10px;
+    z-index: -1;
+}
+
+.exam-pages-col h3 {
+    font-family: 'Droid Serif';
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 13px;
+}
+
+.exam-pages-col p {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    color: #666666;
+    line-height: 24px;
+}
+
+.btn-readmore {
+    display: inline-block;
+    background-color: #00AEEF;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    padding: 12px 20px;
+    margin-top: 38px;
+}
+
+.exam-pages-col:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*---- testimonials ----*/
+
+.testimonial {
+    position: relative;
+    padding: 210px 0px;
+    background: #1b1c1e;
+    color: #ffffff;
+    text-align: center;
+}
+
+.testimonial .image-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.40;
+}
+
+.testimonial .txt-content {
+    font-family: 'Droid Serif';
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.testimonial .txt-name {
+    margin-top: 19px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/*---- writer ----*/
+
+.writer {
+    display: flex;
+    align-items: center;
+    padding: 35px 140px 0 130px;
+}
+
+.writer .txt-content h4 {
+    font-family: 'Droid Serif';
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.writer .txt-content p.name {
+    font-size: 18px;
+    color: #00AEEF;
+    padding: 11px 0 21px;
+}
+
+.writer .txt-content p {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    color: #666666;
+    line-height: 24px;
+}
+
+.writer .txt-content .social {
+    margin-top: 20px;
+}
+
+.writer .txt-content .social img {
+    width: 40px;
+    padding-right: 15px;
+}
+
+.writer .img-writer {
+    position: relative;
+    top: 4px;
+}
+
+.writer .img-writer img {
+    width: 100%;
+}
+
+.writer .social {
+    z-index: 888;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s ease;
+}
+
+.writer .social a {
+    color: #000;
+    font-size: 1.2em;
+    transition: 0.3s ease;
+}
+
+.writer .social a:not(:last-child) {
+    margin-right: 15px;
+}
+
+.writer .social a:hover {
+    transform: scale(1.3);
+}
+
+/*---- device ----*/
+
+.device {
+    background-color: #00AEEF;
+    text-align: center;
+    padding: 120px 10% 0 5%;
+}
+
+.device .txt-content {
+    color: #fff;
+    padding-bottom: 34px;
+}
+
+.device .txt-content h1 {
+    font-family: 'Droid Serif';
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.device .txt-content p {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    width: 45%;
+    margin: auto;
+}
+
+.device .img-device {
+    position: relative;
+    top: 4px;
+}
+
+.device .img-device img {
+    width: 70%;
+}
+
+/*---- footer ----*/
+
+.footer {
+    background-color: #2C2C2C;
+    color: #fff;
+    display: flex;
+    padding: 50px 140px 50px 150px;
+    justify-content: space-between;
+}
+
+.f-left .f-btn-purchase {
+    background-color: #00AEEF;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    padding: 12px 42px 15px 36px;
+}
+
+.f-left p {
+    font-family: 'Roboto';
+    font-weight: 300;
+    margin-top: 33px;
+}
+
+.f-right h4 {
+    font-family: 'Droid Serif';
+    font-weight: 400;
+}
+
+.from-box input {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 0 15px 18px;
+    outline: none;
+    border-radius: unset;
+    border: none;
+    float: left;
+    width: 65%;
+}
+
+.from-box input::placeholder {
+    color: #000;
+}
+
+.from-box button {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #00AEEF;
+    padding: 15px 25px;
+    outline: none;
+    border-radius: unset;
+    border: none;
+    cursor: pointer;
+    float: right;
+    width: 35%;
+}
+
+.from-box button:hover {
+    background-color: #000;
+}
+
+@media screen and (max-width: 700px) {
+
+    /*------- header -------*/
+
+    nav {
+        padding-top: 28px;
+    }
+
+    nav img {
+        z-index: 9;
+        position: relative;
+        width: 135px;
+    }
+
+    .nav-links .fa.fa-times {
+        margin-top: 28px;
+        margin-right: 30px;
+    }
+
+    .text-box {
+        width: 90%;
+        top: 60%;
+    }
+
+    .text-box h1 {
+        font-size: 36px;
+    }
+
+    .btn {
+        display: block;
+        margin: 9px 0;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: #fff;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: #000;
+        text-align: right;
+        font-size: 37px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 25px;
+    }
+
+    .nav-links ul li.btn-purchase {
+        display: block;
+        background-color: #00AEEF;
+        text-align: center;
+        padding: 15px;
+        margin-top: 50%;
+    }
+
+    .nav-links ul li.btn-purchase a {
+        color: #fff;
+    }
+
+    .nav-links ul li {
+        padding: 18px 0;
+    }
+
+    .nav-links ul li:not(li:nth-child(4)) {
+        border-bottom: 1px solid #DDDDDD;
+    }
+
+    .nav-links ul li.menu-home {
+        display: block;
+    }
+
+    /*------- about the book -------*/
+
+    .about-the-book {
+        flex-flow: column;
+        padding: 92px 27px 0;
+    }
+
+    .about-the-book .content h1 {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .about-the-book .content p {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 78px;
+    }
+
+    .about-the-book .cover img {
+        width: 250px;
+    }
+
+    .about-the-book .cover {
+        order: 1;
+    }
+
+    .about-the-book .content {
+        order: 0;
+    }
+
+    /*---- example pages ----*/
+
+    .example-pages {
+        padding-top: 79px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .exam-pages-col::after {
+        width: 93%;
+    }
+
+    .exam-pages-col:not(:last-child) {
+        padding-left: 50px;
+        padding-right: 36px;
+        margin-bottom: 38px;
+    }
+
+    .exam-pages-col h3 {
+        font-size: 16px;
+    }
+
+    /*---- testtimonial ----*/
+
+    .testimonial .text-box {
+        width: 92%;
+        line-height: 36px;
+        top: 50%;
+    }
+
+    .testimonial .txt-content {
+        font-size: 24px;
+    }
+
+    .testimonial .txt-name {
+        margin-top: 9px;
+    }
+
+
+    /*---- writer ----*/
+
+    .writer {
+        padding: 89px 25px 0 25px;
+    }
+
+    .writer .img-writer img {
+        width: 100%;
+    }
+
+    /*---- device ----*/
+
+    .device {
+        padding: 81px 15px 0 15px;
+    }
+
+    .device .img-device img {
+        width: 100%;
+    }
+
+    /*---- footer ----*/
+
+    .footer {
+        flex-direction: column;
+        padding: 52px 25px 48px;
+    }
+
+    .f-left .f-btn-purchase {
+        display: block;
+        text-align: center;
+    }
+
+    .f-left p {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .f-right h4 {
+        text-align: center;
+        margin-top: 57px;
+        margin-bottom: 21px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .nav-links ul li::after {
+        display: none;
+    }
+
+    /*banner*/
+
+    .text-box {
+        width: 90%;
+    }
+
+    /*example page*/
+
+    .example-pages {
+        padding-bottom: 48px;
+    }
+
+    .exam-pages-col:not(:last-child) {
+        margin-bottom: 29px;
+    }
+
+    .row {
+        flex-flow: column;
+    }
+
+    /*about the book*/
+
+    .about-the-book {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .about-the-book .cover img {
+        width: 300px;
+    }
+
+    .about-the-book .content {
+        padding-top: 10%;
+    }
+
+    .about-the-book .content h1 {
+        font-size: 20px;
+    }
+
+    .about-the-book .content p {
+        width: 100%;
+    }
+
+    /*writer*/
+
+    .writer {
+        flex-flow: column;
+        padding-left: 70px;
+        padding-right: 65px;
+    }
+
+    /*footer*/
+
+    .footer {
+        flex-flow: column;
+    }
+
+    .f-left .f-btn-purchase {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .f-left p {
+        text-align: center;
+    }
+
+    .f-right h4 {
+        margin-top: 57px;
+        margin-bottom: 21px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /*banner*/
+
+    .text-box {
+        width: 70%;
+    }
+
+    /*about the book*/
+
+    .about-the-book {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    /*example page*/
+
+    .example-pages {
+        padding-bottom: 45px;
+    }
+
+    /*writer*/
+
+    .writer .img-writer img {
+        width: 450px;
+    }
+
+    /*device*/
+
+    .device .txt-content p {
+        width: 60%;
+    }
+
+    /*footer*/
+
+    .f-right h4 {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    /*example page*/
+
+    .example-pages {
+        padding-bottom: 108px;
+    }
+
+    /*writer*/
+
+    .writer .img-writer img {
+        width: 789px;
+    }
+
+}
+
+@media screen and (min-width: 1600px) {
+
+    /*example page*/
+
+    .example-pages {
+        padding-left: 58px;
+        padding-right: 56px;
+    }
+
+    /*device*/
+
+    .device .txt-content p {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+
+    /*device*/
+
+    .device .txt-content p {
+        width: 32%;
+    }
+}
